@@ -1,12 +1,12 @@
 # Peloton Workouts AI Agent
 
-This AI agent generates a personalized weekly workout plan using Peloton’s API and GPT-4o. The agent will create a plan tailored to your workout history, physical attributes, and fitness goals. 
+This AI agent generates a personalized weekly workout plan using Peloton’s API and GPT-4o. The agent will create a plan tailored to your workout history, physical attributes, and fitness goals. The agent will also adjust the plan over time according to your workout history and progress. 
 
 ## TODO
-- [ ] Add a durable framework to run at scale.
 - [ ] Add prompt options with categories such as cycling, running, rowing, etc.
 - [ ] Add persistent data store.
 - [ ] Add cron jobs to analyze progress and adjust the plan.
+- [ ] Integrate a robust framework to operate at scale such as Azure Durable Task Scheduler, ensuring every task is executed consistently over time.
 
 > **Note:** This project is a proof of concept. A real AI agent would be able to schedule workouts, but the current APIs do not support this functionality.
 
