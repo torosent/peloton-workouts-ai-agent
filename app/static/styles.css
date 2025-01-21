@@ -1,0 +1,24 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#calendar {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fc .fc-list-event-time {
+    display:none;
+}

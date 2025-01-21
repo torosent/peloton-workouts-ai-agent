@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center mb-4">Your Weekly Workout Plan</h1>
+<div id="calendar"></div>
+<a href="/" class="btn btn-secondary mt-4">Back</a>
+<script>
+    const weeklyPlan = {{ weekly_plan | tojson }};
+</script>
+{% endblock %}

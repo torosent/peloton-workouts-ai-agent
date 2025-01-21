@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center mb-4">Peloton Workouts AI Agent</h1>
+{% if error %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+{% endif %}
+<form action="/calendar" method="post" class="card p-4 shadow-sm" id="workout-form">
+    <div class="mb-3">
+        <label for="user_goals" class="form-label">Your Fitness Goals:</label>
+        <textarea id="user_goals" name="user_goals" rows="4" class="form-control" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Generate Plan</button>
+</form>
+<div id="loading-spinner" class="d-none text-center mt-4">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Creating your workout plan... This may take up to 30 seconds. Please be patient.</p>
+</div>
+<script>
+document.getElementById('workout-form').addEventListener('submit', function() {
+    document.getElementById('loading-spinner').classList.remove('d-none');
+    document.getElementById('user_goals').setAttribute('readonly', 'readonly');
+    document.querySelector('button[type="submit"]').disabled = true;
+});
+</script>
+{% endblock %}
